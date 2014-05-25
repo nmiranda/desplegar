@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
-    'aero_scrapper',
+    'aero_scraper',
 )
 
 MIDDLEWARE_CLASSES = (

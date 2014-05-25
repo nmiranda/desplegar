@@ -1,4 +1,6 @@
 Django==1.6.4
 South==0.8.4
 argparse==1.2.1
+beautifulsoup4==4.3.2
+ipython==2.1.0
 wsgiref==0.1.2
