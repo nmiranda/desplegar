@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import json
 
 from aero_scraper import scraper
 
@@ -21,7 +22,7 @@ def index(request):
 				query_dict['adults'],
 				in_date,
 				query_dict.get('children', 0),
-				query_dict.get('infants', 0)
+				query_dict.get('infants', 0),
 			)
 
-		return HttpResponse(response_dict, mimetype='application/json')
+		return HttpResponse(json.dumps(response_dict), content_type='application/json')

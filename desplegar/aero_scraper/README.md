@@ -26,6 +26,7 @@ Si el parámetro 'in_day' no está presente, se asumirá que el vuelo buscado es
 La aplicación, a su vez, retornará un JSON con los siguientes parámetros:
 
 	{
+		'status': El estado de la respuesta (e.g. 'OK', 'ERROR')
 		'out_price': Precio del mejor vuelo de salida
 		'out_fly': Código del mejor vuelo de salida
 		'out_airplane': Modelo de avión del mejor vuelo de salida
@@ -40,5 +41,7 @@ La aplicación, a su vez, retornará un JSON con los siguientes parámetros:
 		'in_length': Duración del mejor vuelo de vuelta
 		'url': La url de la cual se efectuó la consulta
 	}
+
+Si el parámetro 'status' es 'ERROR' el resto de los parámetros pueden no estar presentes.
 
 Si se buscó sólo vuelo de ida, el JSON de respuesta no tendrá los parámetros 'in_price', 'in_fly', 'in_airplane', 'in_dep_time', 'in_arr_time' e 'in_length'.
