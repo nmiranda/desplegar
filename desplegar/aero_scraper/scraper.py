@@ -20,7 +20,7 @@ def getRequestString(airline, from_city, to_city, outward_date, adults, return_d
 		if return_date is None:
 			ida_vuelta = 'ida'
 			outward_date = tuple(map(int, outward_date))
-			format_string = 'http://booking.lan.com/cgi-bin/compra/paso2.cgi?fecha1_dia={:02d}&fecha1_anomes={}-{:02d}&fecha2_dia=31&fecha2_anomes=1969-12&otras_ciudades=&num_segmentos_interfaz=1&tipo_paso1=caja&rand_check=169.26443761278387&from_city2={}&to_city2={}&auAvailability=1&ida_vuelta={}&from_city1={}&to_city1={}&flex=1&cabina=Y&nadults={}&nchildren={}&ninfants={}'
+			format_string = 'http://booking.lan.com/cgi-bin/compra/paso2.cgi?fecha1_dia={0:02d}&fecha1_anomes={1}-{2:02d}&fecha2_dia=31&fecha2_anomes=1969-12&otras_ciudades=&num_segmentos_interfaz=1&tipo_paso1=caja&rand_check=169.26443761278387&from_city2={3}&to_city2={4}&auAvailability=1&ida_vuelta={5}&from_city1={6}&to_city1={7}&flex=1&cabina=Y&nadults={8}&nchildren={9}&ninfants={10}'
 			request_string = format_string.format(
 				outward_date[0],
 				outward_date[2],
@@ -38,7 +38,7 @@ def getRequestString(airline, from_city, to_city, outward_date, adults, return_d
 			ida_vuelta = 'ida_vuelta'
 			outward_date = tuple(map(int, outward_date))
 			return_date = tuple(map(int, return_date))
-			format_string = 'http://booking.lan.com/cgi-bin/compra/paso2.cgi?fecha1_dia={:02d}&fecha1_anomes={}-{:02d}&fecha2_dia={:02d}&fecha2_anomes={}-{:02d}&otras_ciudades=&num_segmentos_interfaz=2&tipo_paso1=caja&rand_check=169.26443761278387&from_city2={}&to_city2={}&auAvailability=1&ida_vuelta={}&from_city1={}&to_city1={}&flex=1&cabina=Y&nadults={}&nchildren={}&ninfants={}'
+			format_string = 'http://booking.lan.com/cgi-bin/compra/paso2.cgi?fecha1_dia={0:02d}&fecha1_anomes={1}-{2:02d}&fecha2_dia={3:02d}&fecha2_anomes={4}-{5:02d}&otras_ciudades=&num_segmentos_interfaz=2&tipo_paso1=caja&rand_check=169.26443761278387&from_city2={6}&to_city2={7}&auAvailability=1&ida_vuelta={8}&from_city1={9}&to_city1={10}&flex=1&cabina=Y&nadults={11}&nchildren={12}&ninfants={13}'
 			request_string = format_string.format(
 				outward_date[0],
 				outward_date[2],
